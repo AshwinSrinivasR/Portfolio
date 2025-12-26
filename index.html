@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-sxqkw=1.0">
 <title>Ashwin Srinivas R | Academic Portfolio</title> </head>
 
 <style>
@@ -206,7 +206,9 @@ footer {
    RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
+
   .bio {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -218,27 +220,23 @@ footer {
     margin-top: 20px;
   }
 
+  .photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .hero {
     min-height: 70vh;
-    background-position: center top;
+    padding: 40px 20px;
+    text-align: center;
   }
 
   .nav-links a {
     margin-left: 14px;
   }
 }
-} .bio {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
 
-  .photo-box {
-    width: 160px;
-    height: 200px;
-    margin-top: 20px;
-  }
-}
 </style>
 </head>
 
@@ -252,7 +250,7 @@ footer {
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#feedback">Feedback</a>
-      <button class="theme-toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙 ☀️</button>
     </div>
   </div>
 </nav>
@@ -285,7 +283,10 @@ footer {
           with an emphasis on clarity, maintainability, and thoughtful design.
         </p>
       </div>
-      <div class="photo-box">   <img src="profile.jpg" alt="Profile Photo"> </div>
+
+      <div class="photo-box">
+        <img src="profile.jpg" alt="Profile Photo">
+      </div>
     </div>
   </div>
 </section>
@@ -297,33 +298,28 @@ footer {
 
     <div class="projects">
       <div class="project">
-        <div class="project-image"></div>
-        <h3>FORM VALIDATION SYSTEM</h3>
-        <a href="project-form.html">View project code & explanation</a>
+        <h3>Form Validation System</h3>
+        <a href="#">View project code & explanation</a>
       </div>
 
       <div class="project">
-        <div class="project-image"></div>
-        <h3>DYNAMIC TO-DO LIST WITH LOCAL STORAGE</h3>
-        <a href="project-todo.html">View project code & explanation</a>
+        <h3>Dynamic To-Do List with Local Storage</h3>
+        <a href="#">View project code & explanation</a>
       </div>
 
       <div class="project">
-        <div class="project-image"></div>
-        <h3>THEME SWITCHER (LIGHT / DARK MODE)</h3>
-        <a href="project-theme.html">View project code & explanation</a>
+        <h3>Theme Switcher (Light / Dark Mode)</h3>
+        <a href="#">View project code & explanation</a>
       </div>
 
       <div class="project">
-        <div class="project-image"></div>
-        <h3>SEARCH AND FILTER SYSTEM</h3>
-        <a href="project-search.html">View project code & explanation</a>
+        <h3>Search and Filter System</h3>
+        <a href="#">View project code & explanation</a>
       </div>
 
       <div class="project">
-        <div class="project-image"></div>
-        <h3>RESPONSIVE NAVIGATION MENU</h3>
-        <a href="project-nav.html">View project code & explanation</a>
+        <h3>Responsive Navigation Menu</h3>
+        <a href="#">View project code & explanation</a>
       </div>
     </div>
   </div>
@@ -333,35 +329,28 @@ footer {
 <section id="feedback">
   <div class="container">
     <h2>Project Reviews</h2>
-    <p>The feedback below reflects impressions from individuals who interacted with the projects.</p>
 
     <div class="feedback">
-      <div class="review"><strong>Ananya Sharma</strong><p>Clear structure and thoughtful implementation.</p></div>
-      <div class="review"><strong>Rohit Mehta</strong><p>The logic felt clean and intentional.</p></div>
-      <div class="review"><strong>Sneha Iyer</strong><p>Navigation was intuitive and professional.</p></div>
-      <div class="review"><strong>Arjun Patel</strong><p>Each project had a clear purpose.</p></div>
-      <div class="review"><strong>Kavya Nair</strong><p>The academic focus really stood out.</p></div>
+      <p><strong>Ramesh Sharma</strong> — Clean structure and very clear logic.</p>
+      <p><strong>Anita Mehta</strong> — The academic focus really stands out.</p>
+      <p><strong>Siddharth Iyer</strong> — Excellent attention to detail.</p>
+      <p><strong>Arjun Patel</strong> — Projects are well thought out.</p>
+      <p><strong>Kavya Nair</strong> — Strong fundamentals and presentation.</p>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  Designed and developed as a personal academic portfolio for educational and professional presentation purposes.
+  <p>
+    Designed and developed as a personal academic portfolio for educational
+    and professional review.
+  </p>
 </footer>
 
 <script>
 function toggleTheme() {
-  const current = document.documentElement.getAttribute("data-theme");
-  if (current === "light") {
-    document.documentElement.removeAttribute("data-theme");
-    localStorage.removeItem("theme");
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
-  }
-}
-if (localStorage.getItem("theme") === "light") {
-  document.documentElement.setAttribute("data-theme", "light");
+  document.body.classList.toggle("light");
 }
 </script>
 
